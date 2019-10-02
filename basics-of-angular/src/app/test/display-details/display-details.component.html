@@ -1,0 +1,9 @@
+<br>
+<button 
+    class="btn btn-primary"
+    (click)="toggleAndAddTimestamp()">Display Details</button>
+<p *ngIf="isParaVisible">Mr India</p>
+<p 
+    *ngFor="let eventTime of allEvents; let i = index" 
+    [ngStyle]="{backgroundColor: getColor(i)}"
+    [ngClass]="{moreThanFive: isMoreThanFive(i)}">{{eventTime}}</p>
